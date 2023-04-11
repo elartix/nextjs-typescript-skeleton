@@ -1,36 +1,80 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# dependencies
+# IDE Files #
+############
+*.iml
+.classpath
+.project
+.settings/
+.idea
+.vscode
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.actionScriptProperties
+.flexConfig.xml
+.flexProperties
+.tmp
+.sass-cache
+.sourceMate
+*/.settings
+*.pem
+
+# temporary or auto generated data
+##################################
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
-/coverage
+# app ignores
+wiki
+design
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# local env files
+# local environment config
+local.*
+*.local
+*.local.*
 .env*.local
+
+# results of build
+/coverage
+/build
+/storybook-static
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+# next-env.d.ts
+
+# next.js
+/.next/
+/out/

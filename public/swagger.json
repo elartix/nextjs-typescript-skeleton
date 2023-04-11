@@ -1,0 +1,10 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Next Swagger API Example",
+    "version": "0.0.1"
+  },
+  "paths": {},
+  "components": {},
+  "tags": []
+}

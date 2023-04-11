@@ -1,0 +1,38 @@
+openapi: 3.0.0
+info:
+  title: Converted from user.swagger.yaml with typeconv
+  version: '1'
+  x-id: user.swagger.yaml
+  x-comment: >-
+    Generated from models/user.ts by core-types-json-schema
+    (https://github.com/grantila/core-types-json-schema) on behalf of typeconv
+    (https://github.com/grantila/typeconv)
+paths: {}
+components:
+  schemas:
+    User:
+      properties:
+        id:
+          title: User.id
+          type: string
+        name:
+          title: User.name
+          type: string
+        phone:
+          title: User.phone
+          type: string
+        address:
+          title: User.address
+          type: string
+        age:
+          title: User.age
+          type: number
+        company:
+          $ref: '#/components/schemas/Company'
+          title: User.company
+      required:
+        - id
+        - name
+      additionalProperties: false
+      title: User
+      type: object

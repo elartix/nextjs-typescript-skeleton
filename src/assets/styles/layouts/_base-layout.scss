@@ -1,0 +1,4 @@
+.base-layout {
+  @apply flex flex-col min-h-screen-vh;
+  //min-height: calc(var(--vh, 1vh) * 100);
+}
