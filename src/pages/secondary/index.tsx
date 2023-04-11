@@ -1,9 +1,15 @@
+// outsource dependencies
 import Head from 'next/head';
 import { ReactNode } from 'react';
+import { Inter } from 'next/font/google';
 
+// local dependencies
 import { config } from '@/constants';
-import { BaseLayout } from '@/modules/layouts/base/BaseLayout';
 import { Secondary } from '@/modules/secondary';
+import { BaseLayout } from '@/modules/layouts/base/BaseLayout';
+
+// Configure
+const inter = Inter({ subsets: ['latin'] });
 
 export default function SecondaryPage () {
   return <>
