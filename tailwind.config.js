@@ -81,7 +81,8 @@ module.exports = {
     blur: {
       0: '0',
       none: '0',
-      sm: '4px',
+      xs: '4px',
+      sm: '5px',
       DEFAULT: '8px',
       md: '12px',
       lg: '16px',
@@ -982,19 +983,37 @@ module.exports = {
         'screen-vh': 'calc(var(--vh, 1vh) * 100)',
       },
       minWidth: {
-        'screen': '100vw',
+        screen: '100vw',
       },
       maxWidth: {
-        'screen': '100vw',
+        screen: '100vw',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        'navbar-move': {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0%)' },
+        }
+      },
+      animation: {
+        'navbar-move': 'navbar-move 0.15s ease-in-out',
       }
     }
   },
   plugins: [
+    // eslint-disable-next-line global-require
     require('@tailwindcss/forms'),
+    // eslint-disable-next-line global-require
     require('@tailwindcss/line-clamp'),
+    // eslint-disable-next-line global-require
     require('@tailwindcss/typography'),
+    // eslint-disable-next-line global-require
     require('@tailwindcss/aspect-ratio'),
+    // eslint-disable-next-line global-require
     require('@headlessui/tailwindcss')
     // ...
   ],
-}
+};

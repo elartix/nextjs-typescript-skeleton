@@ -94,22 +94,35 @@ html {
 
 @layer base {
   html, body, #root, #__next {
-    @apply h-full min-h-full max-w-screen;
+    //@apply h-full min-h-full max-w-screen;
+    @apply h-full min-h-full;
     position: relative;
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  // NOTE: Nextjs bug, scroll event will not fire if overflow-x: hidden
+  //#root, #__next {
+  //  overflow-x: hidden;
+  //}
+  #__next {
+    @apply flex flex-col;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  //background: linear-gradient(
+  //    to bottom,
+  //    transparent,
+  //    rgb(var(--background-end-rgb))
+  //  )
+  //  rgb(var(--background-start-rgb));
 }
 
 a {

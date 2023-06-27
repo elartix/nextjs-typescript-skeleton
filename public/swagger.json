@@ -4,7 +4,78 @@
     "title": "Next Swagger API Example",
     "version": "0.0.1"
   },
-  "paths": {},
-  "components": {},
+  "paths": {
+    "openapi": {
+      "0": "3",
+      "1": ".",
+      "2": "0",
+      "3": ".",
+      "4": "0"
+    },
+    "info": {
+      "title": "Converted from user.swagger.yaml with typeconv",
+      "version": "1",
+      "x-id": "user.swagger.yaml",
+      "x-comment": "Generated from models/user.ts by core-types-json-schema (https://github.com/grantila/core-types-json-schema) on behalf of typeconv (https://github.com/grantila/typeconv)"
+    }
+  },
+  "components": {
+    "schemas": {
+      "Company": {
+        "properties": {
+          "id": {
+            "title": "Company.id",
+            "type": "string"
+          },
+          "name": {
+            "title": "Company.name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "additionalProperties": false,
+        "title": "Company",
+        "type": "object"
+      },
+      "User": {
+        "properties": {
+          "id": {
+            "title": "User.id",
+            "type": "string"
+          },
+          "name": {
+            "title": "User.name",
+            "type": "string"
+          },
+          "phone": {
+            "title": "User.phone",
+            "type": "string"
+          },
+          "address": {
+            "title": "User.address",
+            "type": "string"
+          },
+          "age": {
+            "title": "User.age",
+            "type": "number"
+          },
+          "company": {
+            "$ref": "#/components/schemas/Company",
+            "title": "User.company"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "additionalProperties": false,
+        "title": "User",
+        "type": "object"
+      }
+    }
+  },
   "tags": []
 }

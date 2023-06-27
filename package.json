@@ -1,11 +1,11 @@
 {
-  "name": "finance-expense-nextjs-supabase",
+  "name": "nextjs-typescript-skeleton",
   "version": "0.0.1",
   "private": true,
   "description": "next application",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elartix/finance-expense-nextjs-supabase"
+    "url": "https://github.com/elartix/nextjs-typescript-skeleton"
   },
   "engines": {
     "node": ">=16",
@@ -22,7 +22,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "clean": "rimraf .cache build coverage .next analyze",
-    "postbuild": "next-sitemap && cpy 'models/**/*.swagger.yaml' public/openapi --flat",
+    "postbuild": "next-sitemap && cpy 'src/models/**/*.swagger.yaml' public/openapi --flat",
     "openapi:yaml": "npx typeconv -f ts -t oapi --oapi-format yaml --output-extension 'swagger.yaml' --output-directory 'src/models/openapi' 'models/*.ts'",
     "openapi:swagger": "next-swagger-doc-cli next-swagger-doc.json"
   },
@@ -41,6 +41,7 @@
     "next-redux-wrapper": "^8.1.0",
     "next-seo": "^6.0.0",
     "next-sitemap": "^4.0.7",
+    "next-superjson": "^0.0.4",
     "next-swagger-doc": "^0.3.6",
     "postcss-discard-comments": "^6.0.0",
     "react": "18.2.0",
@@ -52,6 +53,7 @@
     "redux-form": "^8.3.9",
     "redux-saga": "^1.2.3",
     "redux-saga-controller": "^1.2.0",
+    "save": "^2.9.0",
     "swagger-ui-react": "^4.18.2",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"

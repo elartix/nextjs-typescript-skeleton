@@ -1,6 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { NextResponse } from 'next/server';
+import { HttpMethod } from '@/constants';
 
 type Data = {
   name: string
@@ -18,17 +19,17 @@ type Data = {
  */
 const handler = (req: NextApiRequest, res: NextApiResponse<Data>) => {
   switch (req.method) {
-    case 'GET':
+    case HttpMethod.GET:
       //...
       res.status(200).json({ name: 'Hello World!' });
       break;
-    case 'POST':
+    case HttpMethod.POST:
       //...
       break;
-    case 'PUT':
+    case HttpMethod.PUT:
       //...
       break;
-    case 'DELETE':
+    case HttpMethod.DELETE:
       //...
       break;
     default:

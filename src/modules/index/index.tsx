@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 
-import styles from '@/modules/secondary/secondary.module.scss';
+import styles from '@/modules/index/index.module.scss';
 import cn from 'classnames';
 const inter = Inter({ subsets: ['latin'] });
 
@@ -109,5 +109,8 @@ export const Index = function Index () {
         </p>
       </a>
     </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    some text
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </main>;
 };
